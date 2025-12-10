@@ -1,0 +1,9 @@
+C-Working-Space/
+├─ .gitignore
+├─ build/
+├─ Debug/
+├─ Release/
+├─ src/
+│   ├─ main.c
+│   └─ utils.c
+└─ README.md
