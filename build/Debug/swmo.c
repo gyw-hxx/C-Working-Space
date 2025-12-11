@@ -1,16 +1,22 @@
 #include <stdio.h>
 int main( )
 {
-    int a[5][5], i, j, n=1;
-    for ( i=0; i<5; i++)
-        for ( j=0; j<5; j++)
-            a[i][j]=n++ ;
-    printf("The result is : \n");
-    for ( i=0; i<5; i++){
-    for ( j=0; j<=i; j++)
-        printf (" %4d", a[i][j]);
-    printf("\n");
+    int i,j;
+    for(i=1; i<=5; i++){
+        for(j=1; j<=5-i; j++)
+            printf(" "); //打印空格 是5-i 打印前5行
+    for(j=1; j<=2*i-1; j++)
+        printf("*");  //打印星号 是2*i-1
     printf("\n");
     }
-    return 0;
-}
+    for(i=4; i>=1; i--){
+        for(j=1; j<=5-i; j++)
+            printf(" ");
+    for(j=1; j<=2*i-1; j++)
+        printf("*");
+    printf("\n");
+    }
+    return 0;    
+    }
+
+  
