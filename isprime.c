@@ -11,7 +11,7 @@ int main (){
 }
 
 void IsPrime(int m){
-    int i,j,is_prime;
+    int i,is_prime;
     is_prime = 1;
     if (m <= 1){
     printf("%d不是质数",m);
