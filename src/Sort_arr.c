@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 void inv(int x[], int n){
-    int temp,i,j,m=(n-1)/2;
+    int temp,i,j,m=(n-1)/2; //
     for(i=0; i<m; i++){
         j = n-1-i;
         temp = x[i];
@@ -19,7 +19,7 @@ int main() {
     printf("%d ",a[i]);
     printf("\n");
     inv(a,5);
-    printf("The arry has been inverted:%d ",a[i]);
+    printf("The arry has been inverted: ");
     for(i=0; i<5; i++)
     printf("%d ",a[i]);
     return 0;
