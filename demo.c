@@ -1,22 +1,12 @@
 #include <stdio.h>
 int main(){
-    int a,b,c,t;
-    scanf("%d %d %d",&a,&b,&c);
-    if(a<b){
-        t=a;
-        a=b;
-        b=t;
+    int j,c;
+    char n[2][5]={"8980","9198"};
+    for(j=3; j>=0; j--){
+        c = n[0][j] + n[1][j] - 2 * '0';
+        n[0][j]=c % 10 + '0';
     }
-    if(a<c){
-        t=a;
-        a=c;
-        c=t;
-    }
-    if(b<c){
-        t=b;
-        b=c;
-        c=t;
-    }
-    printf("%d %d %d",a,b,c);
+    for(j=0; j<=1; j++)
+    puts(n[j]);
     return 0;
 }
