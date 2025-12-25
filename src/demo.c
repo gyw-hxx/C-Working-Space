@@ -1,33 +1,32 @@
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <malloc.h>
-#define Len sizeof(struct Student)
-
-//建立链表函数
-struct Student
-{
-    char name[100];
-    float score;
-    struct Student *next;
-};
-int n;
-struct Student * creaet(){
-    struct Student * head;
-    struct Student *p1, *p2;
-    n=0;
-    p1 = p2 =(struct Student *) malloc(Len);
-    scanf("%s,%f",&p1->name,&p2->score);
-    head = NULL;
-    while (p1->name!=0)
-    { n = n+1;
-      if(n==1)head=p1;
-      else p2->next=p1;
-      p2=p1;
-      p1=(struct Student *) malloc(Len);
-      scanf("%s,%lf",&p1->name,&p1->score);
+int GCD(int x, int y){
+    int r,temp;
+    if(x < y){
+        temp = x;
+        x = y;
+        y = temp;
     }
-    p2->next=NULL;
-    return(head);
+    
+
+    while(y){
+        r = x % y;
+        x = y;
+        y = r;
+    }
+    return(x);
 }
-                          
+
+int LCM(int x, int y){
+    int min;
+    min = (x * y) / GCD(x,y);
+    return min;
+}
+
+int main(){
+    int x,y,max,min;
+    scanf("%d %d",&x,&y);
+    max = GCD(x,y);
+    min = LCM(x,y);
+    printf("最大公约数为%d,最小公倍数为%d",max,min);
+    return 0;
+}
